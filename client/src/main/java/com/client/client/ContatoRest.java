@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.client.client.database.RepositorioContato;
-
 import Entidade.Contato;
+
 @RestController
 @RequestMapping("/contato")
 public class ContatoRest {
@@ -27,11 +26,8 @@ public class ContatoRest {
     public void salvar(@RequestBody Contato contato){
         
             repositorio.save(contato);
-       
-       
     }
     @PutMapping
-    
     public void alterar (@RequestBody Contato contato){
         if(contato.getId() > 0){
             repositorio.save(contato);
